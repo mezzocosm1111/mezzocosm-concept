@@ -28,4 +28,4 @@ The dwelling is pre-prototype. Rendered architecture, spatial arrangements, moti
 
 Website type uses Archivo Black and Instrument Sans, with IBM Plex Mono for technical captions. The original Helvetica Now font has not been supplied. The text wordmark and human-scale favicon are provisional website treatments, not final logo artwork.
 
-Hero image generated with the built-in image generator. Exact generation prompt is in `assets/hero.prompt.txt`. Libraries and fonts are listed in `assets/THIRD-PARTY.md` with bundled licenses.
+The current portrait hero and community earth-wall image were generated with the built-in image generator. Exact prompts are in `assets/dawn-images.prompt.txt` and embedded in the PNGs. They are labeled as AI concept images, not evidence of a built prototype. The prior wide hero remains an archived asset with its original prompt in `assets/hero.prompt.txt`; it is no longer displayed. Libraries and fonts are listed in `assets/THIRD-PARTY.md` with bundled licenses.
