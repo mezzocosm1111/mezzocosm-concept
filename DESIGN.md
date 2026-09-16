@@ -20,7 +20,7 @@ colors:
 typography:
   display:
     fontFamily: "Archivo, Arial, sans-serif"
-    fontSize: "clamp(44px, 5.25vw, 84px)"
+    fontSize: "clamp(48px, 6vw, 96px)"
     fontWeight: 900
     lineHeight: 1.04
     letterSpacing: "-0.035em"
@@ -119,7 +119,7 @@ This is a code-led, provisional website exploration for a pre-prototype micro-fa
 
 The existing Mezzocosm name and human-scale premise anchor the work. The implemented star and text wordmark are provisional rather than final Mezzoman artwork or a replacement identity approval. Original editable artwork and the owner's Helvetica Now files are still outstanding. Reuse this document as an accurate record of the working implementation, not as a claim that the house is engineered or available.
 
-The current Dawn campaign uses “The dawn of a new way to live.” beside an uncropped 2:3 portrait of the canopy and celestial alignment, followed later by a 4:5 photograph-style concept image of communal earth-wall work. Both visuals are labeled as AI concept images. The former cave slogan and circular hero sticker have been removed from the markup; this campaign revision does not replace the established palette or font system.
+The current Dawn campaign overlays “The dawn of a new way to live.” and its supporting copy on a full-width portrait of the canopy and celestial alignment. The Mezzocosm wordmark, star, navigation, headline, supporting copy, and caption are white over a dark photographic scrim. The desktop image keeps its 2:3 ratio; mobile uses an 800px minimum image height with a crop. A 4:5 photograph-style concept image of communal earth-wall work follows later. Both visuals are labeled as AI concept images. The former cave slogan and circular hero sticker have been removed from the markup; this campaign revision retains the established palette and font system elsewhere.
 
 **Key Characteristics:**
 - Dense display type with conversational supporting text.
@@ -135,11 +135,11 @@ Reviewer disposition supplied at handoff: **ship as working live mockup**; no ma
 Warm paper and earth materials support an assertive blue identity, with coral, sage, and sky providing playful, purposeful section changes. The frontmatter records the actual CSS values; prefixes identify palette alternatives rather than additional simultaneous accents.
 
 ### Primary
-- **Original blue (`brand`)**: wordmark, emphasized text, selected module controls, intelligence layer, and prototype invitation.
+- **Original blue (`brand`)**: footer wordmark, emphasized text, selected module controls, intelligence layer, and prototype invitation. The hero wordmark and star use white in both palettes.
 - **Earth green (`earth-brand`)**: the alternate palette's replacement for the primary brand color.
 
 ### Secondary
-- **Workshop coral (`accent`)**: invitation button, hero-copy rule, mud headline emphasis, and schematic connection points. The alternate palette uses `earth-accent`.
+- **Workshop coral (`accent`)**: invitation button, mud headline emphasis, and schematic connection points. The alternate palette uses `earth-accent`.
 - **Garden sage (`sage`)**: ownership section and future module illustration; `earth-sage` replaces it in the alternate palette.
 
 ### Tertiary
@@ -149,7 +149,7 @@ Warm paper and earth materials support an assertive blue identity, with coral, s
 ### Neutral
 - **Warm paper (`paper`)**: page ground and inverted text; the alternate ground is `earth-paper`.
 - **Workshop ink (`ink`)**: principal text and dark mud section.
-- **Brand white (`brand-ink`)**: text on the primary colored surfaces.
+- **Brand white (`brand-ink`)**: text on the primary colored surfaces. The same #fff value is fixed for the hero wordmark, star, navigation, campaign copy, caption, and keyboard focus in both palettes.
 - **Construction rule (`line`)**: quiet borders and section rules.
 - **Muted olive (`muted`)**: secondary explanatory text.
 
@@ -162,7 +162,7 @@ Warm paper and earth materials support an assertive blue identity, with coral, s
 Dense, closely tracked headings carry the provocation; readable sans-serif paragraphs explain it; small monospaced notes distinguish diagrams, states, and development status. The wordmark currently uses Instrument at weight 650. This is a provisional treatment, not the owner's original Helvetica Now wordmark.
 
 ### Hierarchy
-- **Display:** frontmatter display role, uppercase in the hero with a 10ch maximum width. At 800px and below it uses clamp(36px, 5.4vw, 44px); at 650px and below it uses clamp(40px, 10.8vw, 64px) with a 12ch maximum width. Line-height remains 1.04. The earth-photo headline uses clamp(38px, 4.3vw, 64px), line-height 1.06, and letter-spacing -0.035em; at 650px and below its size is 46px.
+- **Display:** frontmatter display role, uppercase in the hero with a 12ch maximum width. At 800px and below it uses clamp(40px, 6vw, 48px); at 650px and below it uses clamp(38px, 10.6vw, 64px). Line-height remains 1.04. The earth-photo headline uses clamp(38px, 4.3vw, 64px), line-height 1.06, and letter-spacing -0.035em; at 650px and below its size is 46px.
 - **Headline:** frontmatter headline role, with section-specific sizes to fit the editorial composition. Keep deliberate line breaks in their section context.
 - **Title:** section-console and content subheadings; supporting titles also vary by component.
 - **Body:** frontmatter body role, reducing to 16px on mobile. Paragraphs have a default maximum width of 66ch; shorter measures are used beside imagery and in the invitation.
@@ -170,7 +170,9 @@ Dense, closely tracked headings carry the provocation; readable sans-serif parag
 
 ## Layout
 
-The page uses broad, full-width editorial bands rather than a card grid. A fluid gutter aligns header, hero, and sections. The Dawn hero uses equal desktop columns with a 5vw gap and 36px top padding: headline and supporting copy on the left, portrait image and caption on the right. The introduction is a vertical flex column with a 38px gap and 32px top padding. The image stays at 2:3 with object-fit contain, centered, and no maximum height, preserving the full celestial alignment. At 800px and below the grid gap becomes 30px and the introduction gap becomes 24px, with 45px bottom padding. At 650px and below the hero becomes one column, with introduction padding of 38px 24px 32px and a 25px gap; the image has 24px side margins and retains its uncropped 2:3 ratio.
+The page uses broad, full-width editorial bands rather than a card grid. A fluid gutter aligns header, hero copy, and sections. The Dawn hero is one full-width photographic field without outer padding. Its header sits absolutely across the top at z-index 3 and retains role="banner" inside the hero. The introduction overlays the photograph at z-index 2, with top clamp(145px, 12vw, 205px), left aligned to the fluid gutter, a 48% maximum width, and a 28px vertical gap. The centered image uses width 100%, height auto, aspect-ratio 2/3, object-fit cover, and no maximum height; its desktop proportions preserve the full portrait. The caption overlays the bottom between the fluid gutters.
+
+At 800px and below the introduction gap becomes 24px. At 650px and below the overlay begins 135px from the hero top, with 24px left and right offsets, no maximum width, and a 22px gap. The photograph stays full-width and has an 800px minimum height; object-fit cover and object-position 54% center crop the portrait when needed. Mobile captions stack at the bottom with 24px side offsets. There is no separate text column or image side margin in the current hero.
 
 The earth section pairs a headline and 4:5 image with the existing story in 1.1fr / 1fr columns, with a 7vw gap (36px at 800px and below). The image uses object-fit cover. At 650px and below the section stacks, with 38px above the story. Manifesto and other two-column sections retain their established content-specific ratios.
 
@@ -182,25 +184,25 @@ Responsive code exists for the whole page, but the reported mobile visual verifi
 
 ## Elevation & Depth
 
-The interface uses no CSS box shadows. Depth comes from colored surfaces, thin rules, architectural imagery, and the model's soft directional shadows. The WebGL scene uses an orthographic camera, hemisphere and directional lighting, translucent skins, and a shadow-receiving ground plane. Its timber, soil, foliage, glass, and panel colors are scene materials, not general UI tokens.
+The interface uses no CSS box shadows. Depth comes from colored surfaces, thin rules, architectural imagery, and the model's soft directional shadows. The Dawn hero layers white text over a pointer-inert photographic scrim, with #17222d behind the image. Its desktop gradient runs from rgba(8,17,26,.68) at 0% through .57 at 32%, transparent at 65%, and .65 at 100%; mobile uses .65 at the top, .63 at 60%, .18 at 80%, and .8 at the bottom. These overlays support text contrast without becoming a general surface treatment. The WebGL scene uses an orthographic camera, hemisphere and directional lighting, translucent skins, and a shadow-receiving ground plane. Its timber, soil, foliage, glass, and panel colors are scene materials, not general UI tokens.
 
 **The Material Depth Rule.** Keep UI panels flat; let the architecture and its parts provide spatial depth. Do not infer a floating-card shadow system from the rendered house.
 
 ## Shapes
 
-Sections, invitation links, and most controls use square corners. Palette controls have a very small radius; model tools are circles. Dawn campaign images have square corners, and the hero-copy block begins with a 4px coral rule. Future module illustrations round only their upper corners, with the desktop and mobile values recorded in frontmatter. Rules are generally 1px; module outlines use 2px. The house's softened roof corners and tensile sails are architectural forms rather than a mandate to round every interface element.
+Sections, invitation links, and most controls use square corners. Palette controls have a very small radius; model tools are circles. Dawn campaign images have square corners; the hero-copy block has no border, and the overlaid header has a 1px #ffffff55 bottom rule. Future module illustrations round only their upper corners, with the desktop and mobile values recorded in frontmatter. Rules are generally 1px; module outlines use 2px. The house's softened roof corners and tensile sails are architectural forms rather than a mandate to round every interface element.
 
 ## Components
 
 ### Dawn campaign imagery
 
-The live HTML headline is “The dawn of a new way to live.” Its support copy sits below a coral rule, with a 34ch maximum width (35ch on mobile). The hero uses `assets/hero-dawn.png` at 1024 × 1536 with high fetch priority. Its stacked mono caption reads “Imagining Mezzocosm at dawn.” and “AI concept image / First prototype ahead”; the second line uses muted text.
+The live HTML headline is “The dawn of a new way to live.” Its support copy overlays the photograph with a 34ch maximum width (33ch on mobile). The hero uses `assets/hero-dawn.png` at 1024 × 1536 with high fetch priority. Its white 12px mono caption reads “Imagining Mezzocosm at dawn.” and “AI concept image / First prototype ahead”, arranged across the bottom on desktop and stacked on mobile. The white Mezzocosm wordmark and star retain their existing shapes and font treatment, with the navigation overlaid in the same white. The hero text link stays white and gains an underline on hover; hero keyboard focus is white.
 
 The earth section keeps “Made of mud. And us.” above `assets/earth-hands.png` at 1122 × 1402, displayed at 4:5 and loaded lazily. Its caption reads “Bring a friend. Get your hands dirty.” and “AI concept image”, with a #70746b rule and #bacaad second line on the existing ink background. These are generated concept illustrations in a photographic style, not photographs of a built prototype. Built-in image-generation prompts are recorded in `assets/dawn-images.prompt.txt`, and the PNG files retain embedded provenance. The former hero sticker and earth poster mark are absent from the current markup.
 
 ### Buttons and links
 
-The primary contact link is a broad coral rectangle with an arrow, changing to paper on hover. Text links use a thin underline and an arrow, with brand-colored hover text outside the invitation panel. Navigation links underline on hover. A global focus-visible outline uses the brand color at 3px with 5px offset; the prototype panel uses coral for focus visibility. Disabled buttons use opacity .4 and a not-allowed cursor. Contact actions open prefilled email drafts; they are not order forms or payment controls.
+The primary contact link is a broad coral rectangle with an arrow, changing to paper on hover. Text links use a thin underline and an arrow, with brand-colored hover text except in the hero and invitation panel. Navigation links underline on hover. A global focus-visible outline uses the brand color at 3px with 5px offset; the prototype panel uses coral and the photographic hero uses white for focus visibility. Disabled buttons use opacity .4 and a not-allowed cursor. Contact actions open prefilled email drafts; they are not order forms or payment controls.
 
 ### Palette comparison
 
