@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mezzocosm-concept
+    runtime: static
+    buildCommand: node build.mjs
+    staticPublishPath: dist
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
