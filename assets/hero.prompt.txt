@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: photorealistic architectural website hero render
+Primary request: An exceptional architectural concept rendering of Mezzocosm, an exploratory pre-prototype compact micro-farm home.
+Scene/backdrop: Beautiful woodland clearing and meadow, lush but restrained plants, pale cloudy sky with subtle sky blue.
+Subject: One compact, sophisticated, inventive home with a tactile CNC timber rigid inner habitation core, softened organic rectangular form, removable translucent corrugated side skins revealing precise timber ribs. Large glazed greenhouse front with clearly visible top exhaust louvers. The entire front kitchen opens to a wide timber deck. Separate elegant cream tensile kinetic shade sails suspended on slender sage-green articulated arms shade the deck; the sails are separate from the rigid house roof. Rear local-earth infill subtly visible. Shallow mezzanine features a colorful tinted round bubble window. Two adults joyfully gardening on the deck, edible vegetables growing inside the greenhouse.
+Style/medium: Photorealistic art-directed architectural design concept, materially grounded with advanced precise manufactured joinery and believable construction. Refined magazine-quality architectural visualization.
+Composition/framing: Wide landscape approximately 2:1 aspect ratio. Full house in frame occupying center-right 75%; three-quarter eye-level view from front left. Clear unbroken view of the compact house and deck, enough surrounding meadow to read its setting.
+Lighting/mood: Cinematic natural late-afternoon sunlight, warm inviting mood, quiet joy of inhabitation.
+Color palette: Warm natural timber, sage green, subtle coral-colored joint details, cream sails, sky blue.
+Materials/textures: Warm tactile wood grain, precise CNC timber connections, corrugated translucent glazing, clear greenhouse glass, fabric membrane sails, compacted local-earth rear infill.
+Constraints: No text, no logos, no UI, no border, no watermark. Keep this an elegant compact rigid timber home with greenhouse and distinct shade sails. Avoid a generic box, giant tent, oversized house, excessive tropical vegetation, implausible floating construction.
